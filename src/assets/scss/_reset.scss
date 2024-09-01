@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* reset CSS */
+:where(html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video) {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+:where(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main, img, svg, video, canvas, audio, iframe, embed, object) {
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:where(button) {
+	border: none;
+	background: none;
+}
+
+:where(ul, ol, summary) {
+	list-style: none; /* ビュレットを削除、必要に応じて手動で追加する */
+}
+
+:where(table) {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:where(:any-link, button, [type='button'], [type='reset'], [type='submit'], label[for], select, summary, [role='tab'], [role='button']) {
+  cursor: pointer;
+}
+
+:where(img, picture, svg) {
+	max-inline-size: 100%; /* images should never overflow past the available space */
+	block-size: auto; /* アスペクト比を保持 */
+  width: 100%;
+	height: auto;
+}
+
+:where(input, select, button, textarea) {
+  color: #333;
+  font-family: inherit;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  appearance: none;
+  outline: none;
+}
+
+:where(button, [type='button'], [type='reset'], [type='submit']) {
+  touch-action: manipulation;
+}
+
+:where(label){
+	display: inline-flex;
+	align-items: center;
+}
+
+:where(input:-webkit-autofill, textarea:-webkit-autofill) {
+  box-shadow: 0 0 0 1000px #fff inset;
+}
+
+:where(select) {
+  // color: #b6bcc4;
+  // option {
+  //   color: #333;
+  // }
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+:where(input) {
+  &::placeholder {
+    color: #b6bcc4;
+  }
+  /* 旧Edge対応 */
+  ::-ms-input-placeholder {
+    color: #b6bcc4;
+  }
+  /* IE対応 */
+  :-ms-input-placeholder {
+    color: #b6bcc4;
+  }
+
+  &[type='radio'],
+  &[type='checkbox'] {
+    // display: none;
+    opacity: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+}

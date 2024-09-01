@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="グループ_1579" data-name="グループ 1579" transform="translate(-830 -4563)">
+    <g id="楕円形_26" data-name="楕円形 26" transform="translate(830 4563)" fill="none" stroke="#333" stroke-width="1">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="13.5" fill="none"/>
+    </g>
+    <g id="instagram" transform="translate(835.136 4568.136)">
+      <rect id="長方形_34" data-name="長方形 34" width="14" height="14" rx="5" transform="translate(1.864 1.864)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="パス_3" data-name="パス 3" d="M14.3,10.641a3.146,3.146,0,1,1-2.65-2.65A3.146,3.146,0,0,1,14.3,10.641Z" transform="translate(-2.298 -2.265)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="線_4" data-name="線 4" x2="0.008" transform="translate(12.648 5.08)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

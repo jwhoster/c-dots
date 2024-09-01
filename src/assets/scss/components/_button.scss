@@ -1,0 +1,51 @@
+.c-btn {
+  text-align: right;
+  margin-top: 60px;
+  @include breakpoint-down(md) {
+    margin-top: vw(60, 1366);
+  }
+  @include breakpoint-down(sm) {
+    margin-top: vw(42);
+    text-align: left;
+  }
+  &__txt{
+    position: relative;
+    font-family: $fontEn;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: ls(90);
+    color: #5EA9BC;
+    line-height: 1;
+    padding-bottom: 3px;
+    @include breakpoint-down(md) {
+      @include fz(14, 29, 1366);
+      padding-bottom: vw(3, 1366);
+    }
+    @include breakpoint-down(sm) {
+      @include fz(14, 24);
+      padding-bottom: vw(3);
+    }
+    &::after {
+      position: absolute;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: #5ea9bc;
+      bottom: -1px;
+      transform: scale(0, 1);
+      transform-origin: right top;
+      transition: transform 0.5s;
+      @include breakpoint-down(sm) {
+        transform: scale(0.2, 1);
+        transform-origin: left top;
+      }
+    }
+    @include hover {
+      &::after{
+        transform: scale(1, 1);
+        transform-origin: left top;
+      }
+    }
+  }
+}

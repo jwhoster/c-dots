@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+#index {
+  .sec-projects {
+    margin-top: 240px;
+    @include breakpoint-down(md) {
+      margin-top: vw(240, 1366);
+    }
+    @include breakpoint-down(sm) {
+      margin-top: vw(120);
+    }
+    &__content01 {
+      margin-top: 72px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 72px;
+      row-gap: 48px;
+      @include breakpoint-down(md) {
+        margin-top: vw(72, 1366);
+        column-gap: vw(72, 1366);
+        row-gap: vw(48, 1366);
+      }
+      @include breakpoint-down(sm) {
+        margin-top: vw(55);
+        display: block;
+      }
+    }
+    &__items {
+      @include breakpoint-down(sm) {
+        &:not(:first-child) {
+          margin-top: vw(52);
+        }
+      }
+      span {
+        display: block;
+        overflow: hidden;
+        transition: .6s;
+      }
+      @include hover {
+        span{
+          transform: scale(0.95);
+        }
+      }
+    }
+    &__tit {
+      padding-top: 16px;
+      font-size: 14px;
+      line-height: 20px;
+      @include breakpoint-down(md) {
+        padding-top: vw(16, 1366);
+        @include fz(14, 20, 1366);
+      }
+      @include breakpoint-down(sm) {
+        padding-top: vw(14);
+        @include fz(14, 20);
+      }
+    }
+    &__subtit {
+      padding-top: 3px;
+      font-family: $fontEn;
+      font-size: 12px;
+      opacity: 0.4;
+      line-height: 20px;
+      @include breakpoint-down(md) {
+        padding-top: vw(3, 1366);
+        @include fz(12, 20, 1366);
+      }
+      @include breakpoint-down(sm) {
+        padding-top: vw(3);
+        @include fz(12, 20);
+      }
+    }
+    &__content02 {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 56px;
+      row-gap: 40px;
+      @include breakpoint-down(md) {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: vw(48, 1366);
+        column-gap: vw(56, 1366);
+        row-gap: vw(40, 1366);
+      }
+      @include breakpoint-down(sm) {
+        margin-top: vw(52);
+        display: block;
+      }
+    }
+  }
+
+  .sec-blog {
+    &__content {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 55px;
+      @include breakpoint-down(md) {
+        margin-top: vw(56, 1366);
+        gap: vw(55, 1366);
+      }
+      @include breakpoint-down(sm) {
+        display: block;
+        margin-top: vw(40);
+      }
+    }
+    &__items {
+      @include breakpoint-down(sm) {
+        &:not(:first-child) {
+          margin-top: vw(56);
+        }
+      }
+    }
+    &__day {
+      font-family: $fontEn;
+      font-size: 12px;
+      opacity: 0.4;
+      padding-top: 16px;
+      line-height: 20px;
+      @include breakpoint-down(md) {
+        padding-top: vw(16, 1366);
+        @include fz(12, 20, 1366);
+      }
+      @include breakpoint-down(sm) {
+        padding-top: vw(12);
+        @include fz(12, 20);
+      }
+    }
+    &__tit {
+      font-size: 16px;
+      padding-top: 10px;
+      line-height: 24px;
+      line-height: 26px;
+      @include breakpoint-down(md) {
+        padding-top: vw(10, 1366);
+        @include fz(16, 26, 1366);
+      }
+      @include breakpoint-down(sm) {
+        padding-top: vw(8);
+        @include fz(16, 26);
+      }
+    }
+  }
+}

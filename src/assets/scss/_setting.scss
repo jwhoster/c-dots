@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+// Variables
+// ----------------------------------------------------------
+$fontEn: "'Barlow',sans-serif";
+$fontJa: "Hiragino Sans";
+$base_font_color: #333;
+$assets_path: '/assets/';
+$theme_color: #5ea9bc;
+// $viewport: 375;
+// Mixin
+// ----------------------------------------------------------
+// Breakpoint
+$breakpoints: (
+  sm: 0,
+  md: 767px,
+  lg: 1366px,
+) !default;
+
+@function breakpoint-next($name, $breakpoint-names: map-keys($breakpoints)) {
+  $n: index($breakpoint-names, $name);
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+@function breakpoint-min($name) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+// 現在（2018/5/13）のSafariのバグにより0.01pxではなく0.02pxを使用する。
+// https://bugs.webkit.org/show_bug.cgi?id=178261
+@function breakpoint-max($name) {
+  $next: breakpoint-next($name);
+  @return if($next, breakpoint-min($next) - 0.02px, null);
+}
+
+@mixin breakpoint-up($name) {
+  $min: breakpoint-min($name);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($name) {
+  $max: breakpoint-max($name);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($lower, $upper) {
+  $min: breakpoint-min($lower);
+  $max: breakpoint-max($upper);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include breakpoint-up($lower) {
+      @content;
+    }
+  } @else if $min == null {
+    @include breakpoint-down($upper) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-only($name) {
+  $min: breakpoint-min($name);
+  $max: breakpoint-max($name);
+
+  @if $min != null and $max !=null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include breakpoint-up($name) {
+      @content;
+    }
+  } @else if $min == null {
+    @include breakpoint-down($name) {
+      @content;
+    }
+  }
+}
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@function ls($value: 100) {
+  $tracking: calc($value / 1000);
+  @return $tracking * 1em;
+}
+
+@function lh($fontsize: 16, $lineFeed: 24) {
+  $lineheight: calc($lineFeed / $fontsize);
+  @return $lineheight;
+}
+
+@function vw($size, $viewport: 375) {
+  $rate: calc(100 / $viewport);
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz($font_size: 10, $lineheight: 0, $viewport: 375) {
+  font-size: $font_size * 1px;
+  font-size: vw($font_size, $viewport);
+  @if $lineheight != 0 {
+    line-height: vw($lineheight, $viewport);
+  }
+}

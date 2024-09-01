@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+$pagename: 'projects';
+
+#page_#{$pagename} {
+  .projects {
+    &__move{
+      margin-top: 160px;
+      @include breakpoint-down(md) {
+        margin-top: vw(160, 1366);
+      }
+      @include breakpoint-down(sm) {
+        margin-top: vw(120);
+      }
+      &Items{
+        &:not(:first-child){
+          @include breakpoint-down(sm) {
+            margin-top: vw(56);
+          }
+        }
+        .projects__moveImg {
+          display: block;
+          overflow: hidden;
+          transition: .6s;
+        }
+        @include hover {
+          .projects__moveImg{
+            transform: scale(0.95);
+          }
+        }
+      }
+      &Container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px 80px;
+        @include breakpoint-down(md) {
+          gap: vw(60, 1366) vw(80, 1366);
+        }
+        @include breakpoint-down(sm) {
+          display: block;
+        }
+      }
+      &Img{
+        overflow: hidden;
+        img{
+          transition: all 0.3s;
+        }
+      }
+      &Tit{
+        font-size: 14px;
+        letter-spacing: ls(40);
+        margin-top: 16px;
+        font-weight: normal;
+        line-height: 20px;
+        @include breakpoint-down(md) {
+          @include fz(14, 20, 1366);
+          margin-top: vw(16, 1366);
+        }
+        @include breakpoint-down(sm) {
+          @include fz(14, 20);
+          margin-top: vw(12);
+        }
+      }
+      &Subtit{
+        font-size: 12px;
+        font-family: $fontEn;
+        letter-spacing: ls(40);
+        opacity: 0.4;
+        line-height: 19px;
+        @include breakpoint-down(md) {
+          @include fz(12, 19, 1366);
+        }
+        @include breakpoint-down(sm) {
+          @include fz(12, 19);
+        }
+      }
+    }
+  }
+  
+  .detail {
+    .ul-fixInner{
+      text-align: left;
+      padding-right: 32px;
+      @include breakpoint-down(md) {
+        padding-right: vw(32, 1366);
+      }
+      @include breakpoint-down(sm) {
+        padding-right: 0;
+      }
+    }
+    &__move{
+      margin-top: 130px;
+      @include breakpoint-down(md) {
+        margin-top: vw(130, 1366);
+      }
+      @include breakpoint-down(sm) {
+        margin-top: vw(50);
+      }
+    }
+    &__tit{
+      letter-spacing: ls(40);
+      span{
+        display: block;
+        font-size: 12px;
+        letter-spacing: ls(80);
+        line-height: 14px;
+        margin-bottom: 16px;
+        @include breakpoint-down(md) {
+          @include fz(12, 14, 1366);
+          margin-bottom: vw(16, 1366);
+        }
+        @include breakpoint-down(sm) {
+          @include fz(10, 12);
+          margin-bottom: vw(10);
+        }
+      }
+    }
+    &__info{
+      .tit{
+        font-size: 16px;
+        font-family: $fontEn;
+        letter-spacing: ls(40);
+        line-height: 28px;
+        @include breakpoint-down(md) {
+          @include fz(16, 28, 1366);
+        }
+        @include breakpoint-down(sm) {
+          @include fz(14, 20);
+        }
+      }
+      &--credit{
+        font-size: 10px;
+        letter-spacing: ls(40);
+        opacity: 0.5;
+        margin-top: 24px;
+        line-height: 20px;
+        @include breakpoint-down(md) {
+          margin-top: vw(24, 1366);
+          @include fz(10, 20, 1366);
+        }
+        @include breakpoint-down(sm) {
+          margin-top: vw(12);
+          @include fz(10, 20);
+        }
+        span{
+          display: block;
+          &:nth-child(n+2){
+            margin-top: 14px;
+            @include breakpoint-down(md) {
+              margin-top: vw(14, 1366);
+            }
+            @include breakpoint-down(sm) {
+              margin-top: vw(7);
+            }
+          }
+        }
+      }
+    }
+    &__txt{
+      font-size: 14px;
+      letter-spacing: ls(40);
+      line-height: 32px;
+      @include breakpoint-down(md) {
+        @include fz(14, 32, 1366);
+      }
+      @include breakpoint-down(sm) {
+        @include fz(12, 24);
+      }
+    }
+    &__hptxt{
+      font-size: 14px;
+      letter-spacing: ls(80);
+      line-height: 32px;
+      color: #5EA9BC;
+      display: inline-block;
+      margin-top: 18px;
+      font-family: $fontEn;
+      @include breakpoint-down(md) {
+        @include fz(14, 32, 1366);
+        margin-top: vw(18, 1366);
+      }
+      @include breakpoint-down(sm) {
+        @include fz(12, 28);
+        margin-top: vw(12);
+      }
+    }
+    &__img{
+      &:first-of-type{
+        margin-top: 100px;
+        @include breakpoint-down(md) {
+          margin-top: vw(100, 1366);
+        }
+        @include breakpoint-down(sm) {
+          margin-top: vw(40);
+        }
+      }
+      &:nth-of-type(n+2){
+        margin-top: 64px;
+        @include breakpoint-down(md) {
+          margin-top: vw(64, 1366);
+        }
+        @include breakpoint-down(sm) {
+          margin-top: vw(28);
+        }
+      }
+    }
+    &__btn{
+      &--txt{
+        color: $base_font_color;
+      }
+      span{
+        display: inline-block;
+        transform: scale(-1,1);
+      }
+      &--img{
+        stroke: $base_font_color;
+      }
+    }
+  }
+  
+  .other{
+    &__content{
+      margin-top: 72px;
+      gap: 55px;
+      @include breakpoint-down(md) {
+        margin-top: vw(72, 1366);
+        gap: vw(55, 1366);
+      }
+      @include breakpoint-down(sm) {
+        margin-top: vw(48);
+      }
+    }
+    &__items{
+      &:nth-child(n+2){
+        @include breakpoint-down(sm) {
+          margin-top: vw(28);
+        }
+      }
+    }
+  }
+}

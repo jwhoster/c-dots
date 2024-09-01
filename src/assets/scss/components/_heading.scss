@@ -1,0 +1,46 @@
+
+.c-title01 {
+  font-size: 24px;
+  letter-spacing: ls(120);
+  font-family: $fontEn;
+  font-weight: 400;
+  line-height: 38px;
+  @include breakpoint-down(md) {
+    @include fz(24, 38, 1366);
+  }
+  @include breakpoint-down(sm) {
+    @include fz(20, 28);
+  }
+}
+
+.c-title02 {
+  font-size: 20px;
+  letter-spacing: ls(80);
+  font-family: $fontEn;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 160px;
+  padding-bottom: 64px;
+  line-height: 29px;
+  @include breakpoint-down(md) {
+    @include fz(20, 29, 1366);
+    padding-top: vw(160,1366);
+    padding-bottom: vw(64,1366);
+  }
+  @include breakpoint-down(sm) {
+    @include fz(16, 24);
+    padding-top: vw(120);
+    padding-bottom: vw(48);
+  }
+  span{
+    font-size: 12px;
+    display: block;
+    font-family: $fontJa;
+    @include breakpoint-down(md) {
+      @include fz(12, 29, 1366);
+    }
+    @include breakpoint-down(sm) {
+      @include fz(10, 24);
+    }
+  }
+}
