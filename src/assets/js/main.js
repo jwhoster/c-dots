@@ -24,9 +24,9 @@ $(window).on('load resize', function() {
 
 $(window).bind('load', function() {
   AOS.init({
-      offset: 200,
-      delay: 100,
-      duration: 1600,
+      offset: 150,
+      delay: 0,
+      duration: 1800,
       once: true,
   });
 });

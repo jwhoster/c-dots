@@ -64,7 +64,7 @@ include(BASEPATH . 'assets/inc/meta.php');
               </tr>
               <tr>
                   <th>住所</th>
-                  <td>〒480-0142 愛知県丹羽郡大口町中小口ニ丁目580番地</td>
+                  <td>〒480-0142 <br class="u-hidden-up-md">愛知県丹羽郡大口町中小口ニ丁目580番地</td>
                 </tr>
                 <tr>
                   <th>電話番号</th>
@@ -106,7 +106,7 @@ include(BASEPATH . 'assets/inc/meta.php');
 
 <?php include(BASEPATH . 'assets/inc/footer.php'); ?>
 <?php include(BASEPATH . 'assets/inc/footer_lib.php'); ?>
-<script defer src="/assets/js/page/about.js"></script>
+<script defer src="/assets/js/about.bundle.js"></script>
 
 </body>
 

@@ -30,7 +30,7 @@
     width: 65%;
     font-size: 14px;
     font-weight: 400;
-    letter-spacing: ls(40);
+    letter-spacing: ls(80);
     line-height: 38px;
     @include breakpoint-down(md) {
       @include fz(14, 38, 1366);
@@ -57,13 +57,13 @@
   width: 100%;
   th,td{
     font-size: 14px;
-    letter-spacing: ls(40);
+    letter-spacing: ls(80);
     line-height: 29px;
     @include breakpoint-down(md) {
       @include fz(14, 29, 1366);
     }
     @include breakpoint-down(sm) {
-      @include fz(14, 24);
+      @include fz(12, 24);
       display: block;
     }
   }
@@ -104,49 +104,14 @@
   td{
     opacity: 0.7;
     padding-bottom: 5px;
+    padding-left: 10px;
     @include breakpoint-down(md) {
       padding-top: vw(5, 1366);
+      padding-left: vw(10, 1366);
     }
     @include breakpoint-down(sm) {
-      padding-bottom: vw(10, 1366);
+      padding: vw(5) 0 vw(10);
       display: block;
-    }
-  }
-}
-
-.c-buttonStyle{
-  display: inline-block;
-  margin-top: 73px;
-  @include breakpoint-down(md) {
-    margin-top: vw(73, 1366);
-  }
-  @include breakpoint-down(sm) {
-    margin-top: vw(79);
-  }
-  &--txt{
-    font-size: 16px;
-    color: #5EA9BC;
-    line-height: 24px;
-    @include breakpoint-down(md) {
-      @include fz(16, 24, 1366);
-    }
-    @include breakpoint-down(sm) {
-      @include fz(14, 24);
-    }
-  }
-  &--img{
-    margin-left: 11px;
-    transition: all 0.3s;
-    @include breakpoint-down(md) {
-      margin-left: vw(11, 1366);
-    }
-    @include breakpoint-down(sm) {
-      margin-left: vw(5);
-    }
-  }
-  &:hover{
-    .c-buttonStyle--img{
-      transform: translateX(5px);
     }
   }
 }
@@ -209,9 +174,16 @@
 }
 
 .ul-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  @include breakpoint-down(md) {
+    gap: vw(28, 1366);
+  }
   @include breakpoint-down(sm) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: vw(15) 0;
   }
 
 }
@@ -241,24 +213,26 @@
       margin-left: 0;
     }
   }
-  &:nth-child(n+2) {
-    margin-top: 28px;
-    @include breakpoint-down(md) {
-      margin-top: vw(28, 1366);
-    }
-    @include breakpoint-down(sm) {
-      margin-top: 0;
-    }
-  }
-  &:nth-child(n+3) {
-    @include breakpoint-down(sm) {
-      margin-top: vw(24);
-    }
-  }
   a{
     transition: all 0.3s;
     &.is-active {
       color: $base_font_color;
+    }
+    @include breakpoint-down(sm) {
+      position: relative;
+      color: $base_font_color;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 40%;
+        right: vw(20);
+        translate: 0 -50%;
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+        width: vw(8);
+        height: vw(8);
+        rotate: 45deg;
+      }
     }
   }
 }

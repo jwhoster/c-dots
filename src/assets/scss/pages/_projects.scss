@@ -4,6 +4,13 @@ $pagename: 'projects';
 
 #page_#{$pagename} {
   .projects {
+    .ul-listItems{
+      a{
+        &::after{
+          display: none;
+        }
+      }
+    }
     &__move{
       margin-top: 160px;
       @include breakpoint-down(md) {
@@ -48,7 +55,7 @@ $pagename: 'projects';
       }
       &Tit{
         font-size: 14px;
-        letter-spacing: ls(40);
+        letter-spacing: ls(80);
         margin-top: 16px;
         font-weight: normal;
         line-height: 20px;
@@ -64,7 +71,7 @@ $pagename: 'projects';
       &Subtit{
         font-size: 12px;
         font-family: $fontEn;
-        letter-spacing: ls(40);
+        letter-spacing: ls(80);
         opacity: 0.4;
         line-height: 19px;
         @include breakpoint-down(md) {
@@ -94,11 +101,11 @@ $pagename: 'projects';
         margin-top: vw(130, 1366);
       }
       @include breakpoint-down(sm) {
-        margin-top: vw(50);
+        margin-top: vw(60);
       }
     }
     &__tit{
-      letter-spacing: ls(40);
+      letter-spacing: ls(80);
       span{
         display: block;
         font-size: 12px;
@@ -115,50 +122,22 @@ $pagename: 'projects';
         }
       }
     }
-    &__info{
-      .tit{
-        font-size: 16px;
-        font-family: $fontEn;
-        letter-spacing: ls(40);
-        line-height: 28px;
-        @include breakpoint-down(md) {
-          @include fz(16, 28, 1366);
-        }
-        @include breakpoint-down(sm) {
-          @include fz(14, 20);
-        }
+    &__categry{
+      font-size: 16px;
+      font-family: $fontEn;
+      letter-spacing: ls(80);
+      line-height: 28px;
+      @include breakpoint-down(md) {
+        @include fz(16, 28, 1366);
       }
-      &--credit{
-        font-size: 10px;
-        letter-spacing: ls(40);
-        opacity: 0.5;
-        margin-top: 24px;
-        line-height: 20px;
-        @include breakpoint-down(md) {
-          margin-top: vw(24, 1366);
-          @include fz(10, 20, 1366);
-        }
-        @include breakpoint-down(sm) {
-          margin-top: vw(12);
-          @include fz(10, 20);
-        }
-        span{
-          display: block;
-          &:nth-child(n+2){
-            margin-top: 14px;
-            @include breakpoint-down(md) {
-              margin-top: vw(14, 1366);
-            }
-            @include breakpoint-down(sm) {
-              margin-top: vw(7);
-            }
-          }
-        }
+      @include breakpoint-down(sm) {
+        @include fz(14, 20);
+        margin-top: vw(30);
       }
     }
     &__txt{
       font-size: 14px;
-      letter-spacing: ls(40);
+      letter-spacing: ls(80);
       line-height: 32px;
       @include breakpoint-down(md) {
         @include fz(14, 32, 1366);

@@ -5,7 +5,7 @@
         <h3 class="c-title01">CONTACT</h3>
       </div>
       <div class="l-contact__info">
-        <p class="l-contact__txt">ロゴや名刺・ホームページ・写真撮影などお考えの方は<br>お気軽にお問い合わせください。<br>下記よりお問い合わせが可能です。
+        <p class="l-contact__txt">ロゴや名刺・ホームページ・写真撮影など<br class="u-hidden-up-md">お考えの方は<br class="u-hidden-down-md">お気軽にお問い合わせください。<br>下記よりお問い合わせが可能です。
         </p>
         <div class="l-contact__btn c-btn">
           <a href="/contact/" class="l-contact__btn--txt c-btn__txt">お問い合わせ

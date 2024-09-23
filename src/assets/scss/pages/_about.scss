@@ -7,17 +7,17 @@ $pagename: 'about';
     &__move {
       &ConceptTxt {
         font-size: 14px;
-        letter-spacing: ls(40);
+        letter-spacing: ls(80);
         line-height: 38px;
         width: 650px;
         margin: 0 auto;
         text-align: center;
         @include breakpoint-down(md) {
-          @include fz(14, 29, 1366);
+          @include fz(14, 38, 1366);
           width: vw(650, 1366);
         }
         @include breakpoint-down(sm) {
-          @include fz(14, 24);
+          @include fz(12, 28);
           width: 100%;
         }
       }
@@ -69,20 +69,20 @@ $pagename: 'about';
             margin-top: vw(26, 1366);
           }
           @include breakpoint-down(sm) {
-            @include fz(24, 24);
-            margin-top: vw(20);
+            @include fz(22, 20);
+            margin-top: vw(15);
           }
         }
         &Txt {
           font-size: 14px;
           margin-top: 70px;
-          line-height: 29px;
+          line-height: 38px;
           @include breakpoint-down(md) {
-            @include fz(14, 29, 1366);
+            @include fz(14, 38, 1366);
             margin-top: vw(70, 1366);
           }
           @include breakpoint-down(sm) {
-            @include fz(14, 24);
+            @include fz(12, 28);
             margin-top: vw(54);
           }
         }

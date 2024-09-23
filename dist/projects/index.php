@@ -38,7 +38,7 @@ include(BASEPATH . 'assets/inc/meta.php');
     <div class="projects__move ul-move">
       <div class="projects__moveContainer filter-item">
         <div class="projects__moveItems" data-aos="fade-up" data-item="graphic">
-          <a href="/projects/detail/hidamari/">
+          <a href="/projects/detail/01/">
             <div class="projects__moveImg">
               <img src="/assets/img/pages/projects/img01.jpg" alt="" class="projectsMoveItemsImage">
             </div>
@@ -47,7 +47,7 @@ include(BASEPATH . 'assets/inc/meta.php');
           </a>
         </div>
         <div class="projects__moveItems" data-aos="fade-up" data-item="logo">
-          <a href="/projects/detail/hidamari/">
+          <a href="/projects/detail/01/">
             <div class="projects__moveImg">
               <img src="/assets/img/pages/projects/img02.jpg" alt="" class="projectsMoveItemsImage">
             </div>
@@ -56,7 +56,7 @@ include(BASEPATH . 'assets/inc/meta.php');
           </a>
         </div>
         <div class="projects__moveItems" data-aos="fade-up" data-item="graphic">
-          <a href="/projects/detail/hidamari/">
+          <a href="/projects/detail/01/">
             <div class="projects__moveImg">
               <img src="/assets/img/pages/projects/img03.jpg" alt="" class="projectsMoveItemsImage">
             </div>
@@ -65,7 +65,7 @@ include(BASEPATH . 'assets/inc/meta.php');
           </a>
         </div>
         <div class="projects__moveItems" data-aos="fade-up" data-item="web">
-          <a href="/projects/detail/hidamari/">
+          <a href="/projects/detail/01/">
             <div class="projects__moveImg">
               <img src="/assets/img/pages/projects/img04.jpg" alt="" class="projectsMoveItemsImage">
             </div>
@@ -74,7 +74,7 @@ include(BASEPATH . 'assets/inc/meta.php');
           </a>
         </div>
         <div class="projects__moveItems" data-aos="fade-up" data-item="graphic">
-          <a href="/projects/detail/hidamari/">
+          <a href="/projects/detail/01/">
             <div class="projects__moveImg">
               <img src="/assets/img/pages/projects/img01.jpg" alt="" class="projectsMoveItemsImage">
             </div>
@@ -83,7 +83,7 @@ include(BASEPATH . 'assets/inc/meta.php');
           </a>
         </div>
         <div class="projects__moveItems" data-aos="fade-up" data-item="logo">
-          <a href="/projects/detail/hidamari/">
+          <a href="/projects/detail/01/">
             <div class="projects__moveImg">
               <img src="/assets/img/pages/projects/img02.jpg" alt="" class="projectsMoveItemsImage">
             </div>
@@ -92,7 +92,7 @@ include(BASEPATH . 'assets/inc/meta.php');
           </a>
         </div>
         <div class="projects__moveItems" data-aos="fade-up" data-item="graphic">
-          <a href="/projects/detail/hidamari/">
+          <a href="/projects/detail/01/">
             <div class="projects__moveImg">
               <img src="/assets/img/pages/projects/img03.jpg" alt="" class="projectsMoveItemsImage">
             </div>
@@ -101,7 +101,7 @@ include(BASEPATH . 'assets/inc/meta.php');
           </a>
         </div>
         <div class="projects__moveItems" data-aos="fade-up" data-item="web">
-          <a href="/projects/detail/hidamari/">
+          <a href="/projects/detail/01/">
             <div class="projects__moveImg">
               <img src="/assets/img/pages/projects/img04.jpg" alt="" class="projectsMoveItemsImage">
             </div>
@@ -116,7 +116,7 @@ include(BASEPATH . 'assets/inc/meta.php');
 
 <?php include(BASEPATH . 'assets/inc/footer.php'); ?>
 <?php include(BASEPATH . 'assets/inc/footer_lib.php'); ?>
-<script defer src="/assets/js/page/projects.js"></script>
+<script defer src="/assets/js/projects.bundle.js"></script>
 
 
 </body>

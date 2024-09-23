@@ -49,3 +49,45 @@
     }
   }
 }
+
+
+
+.c-buttonStyle{
+  display: inline-block;
+  margin-top: 73px;
+  @include breakpoint-down(md) {
+    margin-top: vw(73, 1366);
+  }
+  @include breakpoint-down(sm) {
+    margin-top: vw(40);
+  }
+  &--txt{
+    font-size: 16px;
+    color: #5EA9BC;
+    line-height: 24px;
+    @include breakpoint-down(md) {
+      @include fz(14, 24, 1366);
+    }
+    @include breakpoint-down(sm) {
+      @include fz(12, 24);
+    }
+  }
+  &--img{
+    margin-left: 11px;
+    transition: all 0.3s;
+    width: 60px;
+    @include breakpoint-down(md) {
+      margin-left: vw(11, 1366);
+      width: vw(60, 1366);
+    }
+    @include breakpoint-down(sm) {
+      margin-left: vw(5);
+      width: vw(40);
+    }
+  }
+  &:hover{
+    .c-buttonStyle--img{
+      transform: translateX(5px);
+    }
+  }
+}

@@ -19,7 +19,7 @@ include(BASEPATH . 'assets/inc/meta.php');
       <div class="contact__moveContainer">
         <div class="contact__moveContent" id="contact">
           <p class="contact__txt" data-aos="fade-up">
-            ロゴや名刺・ホームページ・写真撮影などお考えの方はお気軽にお問い合わせください。<br>
+            ロゴや名刺・ホームページ・写真撮影など<br class="u-hidden-up-md">お考えの方はお気軽にお問い合わせください。<br>
             下記よりお問い合わせが可能です。
           </p>
           <table class="contact__table" data-aos="fade-up">
@@ -28,7 +28,7 @@ include(BASEPATH . 'assets/inc/meta.php');
                 <th class="l-change">お名前</th>
                 <td><input type="text" name="user_name" placeholder="例：山田 太郎"></td>
               </tr>
-              <tr class="required">
+              <tr>
                 <th>会社名/団体名/店舗名</th>
                 <td><input type="text" name="company_name" placeholder="例：株式会社テスト"></td>
               </tr>

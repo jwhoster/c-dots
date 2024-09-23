@@ -9,7 +9,7 @@ include(BASEPATH . 'assets/inc/meta.php');
 <?php include(BASEPATH . 'assets/inc/header.php'); ?>
 
 <section class="contact c-secLayout">
-    <div class="contact__container ul-container c-innerS">
+    <div class="contact__container ul-container l-sec__inner">
         <div class="contact__fix ul-fix">
             <div class="ul-fixInner">
                 <h2 class="contact__tit c-title01 ul-title" data-aos="fade-up">CONTACT</h2>

@@ -9,7 +9,7 @@ $pagename: 'service';
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    letter-spacing: ls(40);
+    letter-spacing: ls(80);
     &:nth-of-type(n+2){
       margin-top:64px;
       @include breakpoint-down(md) {
@@ -27,7 +27,7 @@ $pagename: 'service';
         @include fz(14, 20, 1366);
       }
       @include breakpoint-down(sm) {
-        @include fz(12, 20);
+        @include fz(12, 24);
       }
     }
     &--head{
@@ -109,7 +109,7 @@ $pagename: 'service';
     .category{
       font-size: 16px;
       font-family: $fontEn;
-      letter-spacing: ls(40);
+      letter-spacing: ls(80);
       margin-top: 22px;
       line-height: 20px;
       @include breakpoint-down(md) {
@@ -123,7 +123,7 @@ $pagename: 'service';
     }
     .txt{
       font-size: 14px;
-      letter-spacing: ls(40);
+      letter-spacing: ls(80);
       margin-top: 40px;
       line-height: 32px;
       @include breakpoint-down(md) {

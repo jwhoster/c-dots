@@ -14,6 +14,18 @@ $pagename: 'contact';
       height: vw(42);
     }
   }
+  textarea{
+    padding-top: 15px;
+    height: 60px;
+    @include breakpoint-down(md) {
+      height: vw(60, 1366);
+      padding-top: vw(15, 1366);
+    }
+    @include breakpoint-down(sm) {
+      height: vw(60);
+      padding-top: vw(10);
+    }
+  }
   button{
     cursor: pointer;
   }
@@ -29,10 +41,10 @@ $pagename: 'contact';
     }
     &__txt{
       font-size: 16px;
-      line-height: 40px;
+      line-height: 36px;
       letter-spacing: ls(80);
       @include breakpoint-down(md) {
-        @include fz(16, 40, 1366);
+        @include fz(16, 36, 1366);
       }
       @include breakpoint-down(sm) {
         @include fz(14, 28);
@@ -50,23 +62,46 @@ $pagename: 'contact';
       }
       tr{
         border-bottom: 1px solid rgba($color: $base_font_color, $alpha: 0.3);
+        &.required{
+          th{
+            position: relative;
+            width: fit-content;
+            &::after{
+              content: '※必須';
+              color: #f00;
+              font-size: 11px;
+              line-height: 1;
+              position: absolute;
+              top: 50%;
+              right: -50px;
+              translate: 0 -50%;
+              @include breakpoint-down(md) {
+                font-size: vw(11, 1366);
+                right: vw(-50, 1366);
+              }
+              @include breakpoint-down(sm) {
+                font-size: vw(10);
+                right: vw(-40);
+              }
+            }
+          }
+        }
         th{
           display: block;
           text-align-last: left;
-          font-size: 18px;
-          line-height: 31px;
+          font-size: 16px;
           letter-spacing: ls(80);
+          line-height: 30px;
           margin-top: 40px;
-          padding-bottom: 24px;
+          margin-bottom: 10px;
           @include breakpoint-down(md) {
-            @include fz(18, 31, 1366);
+            @include fz(16, 30, 1366);
             margin-top: vw(40, 1366);
-            padding-bottom: vw(20, 1366);
+            margin-bottom: vw(10, 1366);
           }
           @include breakpoint-down(sm) {
-            @include fz(16, 27);
+            @include fz(14, 28);
             margin-top: vw(40);
-            padding-bottom: vw(16);
           }
           &.l-change{
             margin-top: 0;
@@ -78,12 +113,12 @@ $pagename: 'contact';
           textarea{
             &::placeholder {
               color: #CBCBCB;
-              font-size: 18px;
+              font-size: 16px;
               @include breakpoint-down(md) {
-                @include fz(18, 40, 1366);
+                @include fz(16, 40, 1366);
               }
               @include breakpoint-down(sm) {
-                @include fz(16, 20);
+                @include fz(14, 28);
               }
             }
           }

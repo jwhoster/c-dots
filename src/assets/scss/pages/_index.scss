@@ -115,28 +115,27 @@
       font-family: $fontEn;
       font-size: 12px;
       opacity: 0.4;
-      padding-top: 16px;
+      padding-top: 18px;
       line-height: 20px;
       @include breakpoint-down(md) {
-        padding-top: vw(16, 1366);
+        padding-top: vw(18, 1366);
         @include fz(12, 20, 1366);
       }
       @include breakpoint-down(sm) {
-        padding-top: vw(12);
+        padding-top: vw(18);
         @include fz(12, 20);
       }
     }
     &__tit {
       font-size: 16px;
-      padding-top: 10px;
+      padding-top: 5px;
       line-height: 24px;
-      line-height: 26px;
       @include breakpoint-down(md) {
-        padding-top: vw(10, 1366);
+        padding-top: vw(5, 1366);
         @include fz(16, 26, 1366);
       }
       @include breakpoint-down(sm) {
-        padding-top: vw(8);
+        padding-top: vw(5);
         @include fz(16, 26);
       }
     }

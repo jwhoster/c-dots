@@ -289,7 +289,7 @@ a {
       @include fz(14, 38, 1366);
     }
     @include breakpoint-down(sm) {
-      @include fz(11, 30);
+      @include fz(13, 30);
     }
   }
   &__btn{
@@ -364,10 +364,11 @@ a {
     margin-top: 37px;
     @include breakpoint-down(md) {
       width: vw(130, 1366);
+      margin-top: vw(37, 1366);
     }
     @include breakpoint-down(sm) {
       width: vw(110);
-      margin-top: 0;
+      margin-top: vw(30);
     }
   }
   &__icon {
