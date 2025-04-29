@@ -112,6 +112,18 @@
           margin-top: vw(56);
         }
       }
+      >a{
+        .sec-blog__img {
+          display: block;
+          overflow: hidden;
+          transition: .6s;
+        }
+        @include hover {
+          .sec-blog__img{
+            transform: scale(0.95);
+          }
+        }
+      }
     }
     &__day {
       font-family: $fontEn;

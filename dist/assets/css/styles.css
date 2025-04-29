@@ -1323,6 +1323,12 @@ a.no-link {
   gap: 55px;
 }
 
+#index .sec-blog__items>a .sec-blog__img {
+  display: block;
+  overflow: hidden;
+  transition: .6s;
+}
+
 #index .sec-blog__day {
   font-family: "'Barlow',sans-serif";
   font-size: 12px;
@@ -3032,6 +3038,11 @@ a.no-link {
   }
 
   #index .sec-projects__items:hover span {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  #index .sec-blog__items>a:hover .sec-blog__img {
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
   }
