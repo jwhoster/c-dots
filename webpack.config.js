@@ -23,6 +23,9 @@ module.exports = {
     projects: [
       './src/assets/js/pages/projects.js',
     ],
+    blog: [
+      './src/assets/js/pages/blog.js',
+    ],
     service: [
       './src/assets/js/pages/service.js',
     ],

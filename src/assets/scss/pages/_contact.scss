@@ -127,6 +127,10 @@ $pagename: 'contact';
     }
     &__btn{
         text-align: center;
+        &--txt{
+          width: fit-content;
+          margin-inline: auto;
+        }
     }
   }
 }

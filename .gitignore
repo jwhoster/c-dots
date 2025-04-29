@@ -1,1 +1,22 @@
-node_modules
+# WordPressのすべてを除外（デフォルトで全ファイルを除外）
+/*
+
+# テーマディレクトリとwp-configだけを含める
+!/wp-content/
+!/wp-content/*
+!/wp-content/themes/cdots
+
+# wp-config.phpを含める
+!/wp-config.php
+
+# 一般的に除外すべきファイル
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*~
+
+# テーマ内の不要なファイルを除外（必要に応じて）
+/wp-content/themes/*/node_modules/
+/wp-content/themes/*/.sass-cache/
+/wp-content/themes/*/.git/

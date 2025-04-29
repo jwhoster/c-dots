@@ -12,6 +12,7 @@ $pagename: 'projects';
       }
     }
     &__move{
+      position: relative;
       margin-top: 160px;
       @include breakpoint-down(md) {
         margin-top: vw(160, 1366);
@@ -48,9 +49,13 @@ $pagename: 'projects';
         }
       }
       &Img{
+        aspect-ratio: 16 / 9;
         overflow: hidden;
         img{
           transition: all 0.3s;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
       &Tit{
@@ -106,7 +111,7 @@ $pagename: 'projects';
     }
     &__tit{
       letter-spacing: ls(80);
-      span{
+      >span{
         display: block;
         font-size: 12px;
         letter-spacing: ls(80);
@@ -199,8 +204,10 @@ $pagename: 'projects';
   
   .other{
     &__content{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       margin-top: 72px;
-      gap: 55px;
+      gap: 0 55px;
       @include breakpoint-down(md) {
         margin-top: vw(72, 1366);
         gap: vw(55, 1366);
@@ -214,6 +221,11 @@ $pagename: 'projects';
         @include breakpoint-down(sm) {
           margin-top: vw(28);
         }
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }

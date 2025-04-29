@@ -2,6 +2,7 @@
 
 #index {
   .sec-projects {
+    position: relative;
     margin-top: 240px;
     @include breakpoint-down(md) {
       margin-top: vw(240, 1366);
@@ -32,6 +33,7 @@
         }
       }
       span {
+        aspect-ratio: 16 / 9;
         display: block;
         overflow: hidden;
         transition: .6s;
